@@ -6,10 +6,85 @@
 <body>
 <div class="reveal">
     <div class="slides">
-        <section>Hello Irdeto people!</section>
-        <section>This is the slide 2</section>
-        <section>Konstantina</section>
-    </div>
+		<section>Hello Irdeto people!</section>
+		<section>
+			High Performance 
+			managed languages
+			<p>
+				<small>by</small>
+			</p>
+				<h3>Martin Thomson</h3>
+			
+			<p>
+				<small>(Konstantina)</small>
+			</p>
+		</section>
+
+		<section>
+			<h3>Contents<h3>
+			<ul>
+				<li>Context</li>
+				<li>Runtime Optimisation</li>
+				<li>Garbage Collection</li>
+				<li>more...</li>
+			</ul>
+
+			<aside class="notes">
+				Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+			</aside>
+		</section>
+		<section>
+			<section>
+				<h3>Context</h3>
+				<p>
+				</p>
+			</section>
+			<section>
+				<p>Managed runtime is not always the best choise:</p>
+				<p class="fragment">embedded</p>
+				<p class="fragment">limited resources</p>
+				<p class="fragment">hardware</p>
+			</section>
+			<section>
+				<p>Time, Skills, Resources</p>
+				if I had more time I would have written a shorter letter
+				In a large codebase it is really difficult to do eveything well
+			</section>
+			<section>
+				<small>Time to add 2 integers</small>
+				<p class="fragment">4 additions at once</p>
+				<p class="fragment">sequentially ~1ns</p>
+				<p class="fragment">random walk 3ns</p>
+				<p class="fragment">dependent 7ns</p>
+				<p class="fragment">random in the whole array ~19ns</p>
+				<p class="fragment">dependent in the whole array 90ns</p>
+				<p class="fragment">numa access + 40ns</p>
+			</section>
+
+			<section>
+				<p class="fragment">Memory is transported in Cachelines</p>
+				<p class="fragment">Memory is managed in OS Pages</p>
+				<p class="fragment">Memory is pre-fetched on predictable access patterns</p>
+			</section>
+		</section>
+		<section>
+			<p class="fragment">Avoiding cache misses</p>
+			<p class="fragment">Strength Reduction</p>
+			<p class="fragment">Avoiding duplicate work</p>
+			<p class="fragment">Amortising expensive operations • Mechanical Sympathy</p>
+			<p class="fragment">Choice of Data Structures</p>
+			<p class="fragment">Choice of Algorithms</p>
+			<p class="fragment">API Design</p>
+			<p class="fragment">Overall Design</p>
+		</section>
+		<section>
+			<p>more</p>
+			<p>immutable data</p>
+			<p>concurrency</p>
+			<p>functional programming</p>
+			<p>https://mechanical-sympathy.blogspot.nl/</p>
+		</section>
+	</div>
 </div>
 <script src="js/reveal.js"></script>
 <script>
