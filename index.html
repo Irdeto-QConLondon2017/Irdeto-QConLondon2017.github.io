@@ -100,7 +100,180 @@
             <br>
             <p>Thanks!</p>
         </section>
-    </div>
+		<section>
+			High Performance 
+			managed languages
+			<p>
+				<small>by</small>
+			</p>
+				<h3>Martin Thomson</h3>
+		</section>
+		<section>
+		Aeron
+			<p><small>Aeron is designed to provide high-throughput and low-latency message transport from publishers to subscribers</small></p>
+			<small>
+				<ul>
+					<li>Java</li>
+					<li>C#</li>
+					<li>C++</li>
+				</ul>
+				<p>
+					<span class="fragment fade-in">
+    					<span class="fragment fade-out">Which is the fastest implementation?</span>
+					</span>
+				</p>
+    			<p>
+    				<span class="fragment fade-in">
+        				<span class="fragment fade-out">Which was the fastest before any optimizations?</span>
+    				</span>
+    			</p>
+				<p class="fragment">Time, Skills &amp; Resources</p>
+				<p class="fragment">Managed runtime is not always the best choise</p>
+					
+			</small>
+		</section>
+		<section>
+			Access Pattern Benchmark
+			<section>			
+				<table border="0">
+					<tr><td>
+						<p>pattern of access</td><td><p>average time of individual addition</p>
+							</td></tr>
+					<tr><td>
+						<p class="fragment">sequentially:</td><td><p class="fragment" align="right">~1ns</p>
+							</td></tr><tr><td>
+						<p class="fragment">random walk  per OS page:</td><td><p class="fragment" align="right">~3ns</p>
+							</td></tr><tr><td>
+						<p class="fragment">data dependent walk per OS page:</td><td><p class="fragment" align="right">~7ns</p>
+							</td></tr><tr><td>
+						<p class="fragment">random heap walk</td><td><p class="fragment" align="right">~19ns</p>
+							</td></tr><tr><td>
+						<p class="fragment">data dependant heap walk:</td><td><p class="fragment" align="right">~90ns</p>
+							</td></tr><tr><td>
+						<p class="fragment">numa access:</td><td><p class="fragment" align="right">+40ns</p>
+							</td></tr>
+				</table>
+			</section>
+
+			<section>
+				<ul>
+					<li class="fragment">Memory is transported in Cachelines</li>
+					<li class="fragment">Memory is managed in OS Pages</li>
+					<li class="fragment">Memory is pre-fetched on predictable access patterns</li>
+				</ul>		
+			</section>
+		</section>
+		<section>			
+				<p>Profile guided optimizations</p>
+			<section>
+			</section>
+			<section>			
+				<p><img src="img/konstantina/branches_a.png" style="max-width: 80%"/></p>			
+			</section>
+			<section>			
+				<p><img src="img/konstantina/branches_b.png" style="max-width: 80%"/></p>
+			</section>
+			<section>			
+				<p><img src="img/konstantina/inlining_a.png" style="max-width: 80%"/></p>
+			</section>
+			<section>			
+				<p><img src="img/konstantina/inlining_b.png" style="max-width: 80%"/></p>
+			</section>
+		</section>
+			
+			
+		<section>			
+			<p>Garbage collection</p>
+
+			<section>
+				<p class="fragment">Generational hypothesis: "most objects die young"</p>
+				<small>
+				<ul>
+					<li class="fragment">Focus collection efforts on young generation</li>
+					<li class="fragment">Promote objects that live long enough to older generations</li>
+					<li class="fragment">Only collect older generations as they fill up</li>
+					<li class="fragment">Tends to be more efficient</li>
+				</ul>
+				</small>
+			</section>
+			<section>
+				<small>
+				<p>Compaction</p>
+				</small>
+				<p><img src="img/konstantina/compaction_a.png" style="max-width: 80%"/></p>
+			</section>
+			<section>
+				<small>
+				<p>Compaction</p>
+				</small>
+				<p><img src="img/konstantina/compaction_b.png" style="max-width: 80%"/></p>
+			</section>
+			<section>
+				<small>
+				<p>Compaction</p> 
+				<ul>
+					<li>Defragments heap</li>
+					<li>Moves objects to memory</li>
+					<li>Remaps all affected references</li>
+					<li>Frees contiguous memory regions
+						<ul><li>Same OS pages, same cache lines</li></ul></li>
+				</ul>
+				</small>
+			</section>
+			<section>
+				<small><p>G1</p></small>
+				<p><img src="img/konstantina/concurrent_compaction.png" style="max-width: 80%"/></p>
+			</section>
+			<section>
+				<table border="0">
+					<tr><td>
+						<p>G1</td><td><p>Azul Zing C4</p>
+							</td></tr>
+					<tr><td>
+						<p>monolithic stop-the-world copying new gen</td><td><p>concurrent, compacting new gen</p>
+							</td></tr>
+					<tr><td>
+						<p>mostly concurrent old gen marker</td><td><p>concurrent guaranteed-single-pass-marker</p>
+							</td></tr>
+					<tr><td>
+						<p>stop-the-world mostly incremental compacting old gen</td><td><p>concurrent, compacting old gen</p>
+							</td></tr>
+					<tr><td>
+						<p>fallback to full collection</td><td><p>non stop the world fallback</p>
+							</td></tr>
+					<tr><td>
+						<p>Compact non-popular regions in short stop the world pauses</td><td><p>easier tuning</p>
+							</td></tr>
+				</table>
+			</section>
+		</section>
+		<section>
+			Future
+			<section>
+				<p>object inlining, aggregation</p> 
+			</section>
+			<section>
+				<img src="img/konstantina/modern_hardware.png" style="max-width: 100%"/>
+			</section>
+		</section>
+		<section>
+			<p>Not easy to pick a winner</p> 
+		</section>
+		<section>
+			<ul>
+				<li>Avoiding cache misses</li>
+				<li>Avoiding duplicate work</li>
+				<li>Choice of Data Structures</li>
+				<li>Choice of Algorithms</li>
+				<li>API Design</li>
+				<li>Overall Design</li>
+			</ul>
+		</section>
+		<section>
+			<p>https://mechanical-sympathy.blogspot.nl/</p>
+			<p>https://www.azul.com/products/zing/pgc/</p>
+		</section>
+	</div>
 </div>
 <script src="js/reveal.js"></script>
 <script>
