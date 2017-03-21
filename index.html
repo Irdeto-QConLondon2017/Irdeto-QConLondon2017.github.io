@@ -1,115 +1,116 @@
 <html>
 <head>
-    <link rel="stylesheet" href="css/reveal.css">
-    <link rel="stylesheet" href="css/theme/black.css">
+	<link rel="stylesheet" href="lib/revealjs/css/reveal.css">
+	<link rel="stylesheet" href="lib/revealjs/css/theme/black.css">
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <div class="reveal">
-    <div class="slides">
-        <section>
-            <img src="img/francesco/code-revolution.jpg" style="max-width: 70%">
-            <p><small>by Adam Tornhill</small></p>
-        </section>
-        <section>
-            What is technical debt?
-            <p>
-                <small>
-                    <i>Technical debt is "a concept in programming that reflects the extra development work that arises when code that is easy to implement in the short run is used instead of applying the best overall solution".</i>
-                </small>
-            </p>
-            <p>
-                <small>
-                    <i>Technical debt can be compared to monetary debt. If technical debt is not repaid, it can accumulate <strong style="color: orange">interest</strong>, making it harder to implement changes later on.</i>
-                </small>
-            </p>
-            <small>[from Wikipedia]</small>
-        </section>
-        <section>
-            <img src="img/francesco/%20bad-code.jpg" style="max-width: 70%">
-        </section>
-        <section>
-            <p>Version Control System</p>
-            <p>
-                <small>
-                    Knows exaclty who did what change in what point of time
-                </small>
-            </p>
-            <p class="fragment">
-                <small>
-                    ...how to use it to identify the code with the highest interest rate?
-                </small>
-            </p>
-        </section>
-        <section>
-            <img src="img/francesco/hotspot-1.jpg" style="max-width: 95%">
-        </section>
-        <section>
-            <img src="img/francesco/hotspot-2.jpg" style="max-width: 70%">
-        </section>
-        <section>
-            <img src="img/francesco/hotspot-3.jpg" style="max-width: 95%">
-        </section>
-        <section>
-            <img src="img/francesco/quote.jpg" style="max-width: 95%">
-        </section>
-        <section>
-            <img src="img/francesco/graph.jpg" style="max-width: 95%">
-        </section>
-        <section>
-            <img src="img/francesco/hotspot-4.jpg" style="max-width: 95%">
-        </section>
-        <section>
-            <img src="img/francesco/temporal-coupling.jpg" style="max-width: 95%">
-        </section>
-        <section>
-            <p>Tools by Adam Tornhill</p>
-            <small>
-                <ul>
-                    <li>
-                        Code Maat: open source, text only (GPL) - <a target="_blank" href="https://github.com/adamtornhill/code-maat">github.com/adamtornhill/code-maat</a>
-                    </li>
-                    <br>
-                    <li>
-                        CodeScene: free for open source (commercial) - <a target="_blank" href="https://codescene.io">codescene.io</a>
-                    </li>
-                </ul>
-            </small>
-        </section>
-        <section>
-            <p>
-                <small>
-                    <strong style="color: orange">Temporal coupling analysis</strong> using Code Maat on Irdeto MediaManager
-                </small>
-            </p>
-            <img src="img/francesco/output-temporal-coupling.jpg" style="max-width: 95%">
-        </section>
-        <section>
-            <p>
-                <small>
-                    <strong style="color: orange">Hotspots analysis</strong> using Code Maat analysis on Irdeto MediaManager
-                </small>
-            </p>
-            <img src="img/francesco/output-hotspots.jpg" style="max-width: 85%">
-        </section>
-        <section>
-            <p>
-                <small>
-                    The author's website: <a href="http://adamtornhill.com/">adamtornhill.com</a>
-                </small>
-            </p>
-            <br>
-            <p>Thanks!</p>
-        </section>
+	<div class="slides">
 		<section>
-			High Performance 
+			<img src="img/francesco/code-revolution.jpg" style="max-width: 70%">
+			<p><small>by Adam Tornhill</small></p>
+		</section>
+		<section>
+			What is technical debt?
+			<p>
+				<small>
+					<i>Technical debt is "a concept in programming that reflects the extra development work that arises when code that is easy to implement in the short run is used instead of applying the best overall solution".</i>
+				</small>
+			</p>
+			<p>
+				<small>
+					<i>Technical debt can be compared to monetary debt. If technical debt is not repaid, it can accumulate <strong style="color: orange">interest</strong>, making it harder to implement changes later on.</i>
+				</small>
+			</p>
+			<small>[from Wikipedia]</small>
+		</section>
+		<section>
+			<img src="img/francesco/%20bad-code.jpg" style="max-width: 70%">
+		</section>
+		<section>
+			<p>Version Control System</p>
+			<p>
+				<small>
+					Knows exaclty who did what change in what point of time
+				</small>
+			</p>
+			<p class="fragment">
+				<small>
+					...how to use it to identify the code with the highest interest rate?
+				</small>
+			</p>
+		</section>
+		<section>
+			<img src="img/francesco/hotspot-1.jpg" style="max-width: 95%">
+		</section>
+		<section>
+			<img src="img/francesco/hotspot-2.jpg" style="max-width: 70%">
+		</section>
+		<section>
+			<img src="img/francesco/hotspot-3.jpg" style="max-width: 95%">
+		</section>
+		<section>
+			<img src="img/francesco/quote.jpg" style="max-width: 95%">
+		</section>
+		<section>
+			<img src="img/francesco/graph.jpg" style="max-width: 95%">
+		</section>
+		<section>
+			<img src="img/francesco/hotspot-4.jpg" style="max-width: 95%">
+		</section>
+		<section>
+			<img src="img/francesco/temporal-coupling.jpg" style="max-width: 95%">
+		</section>
+		<section>
+			<p>Tools by Adam Tornhill</p>
+			<small>
+				<ul>
+					<li>
+						Code Maat: open source, text only (GPL) - <a target="_blank" href="https://github.com/adamtornhill/code-maat">github.com/adamtornhill/code-maat</a>
+					</li>
+					<br>
+					<li>
+						CodeScene: free for open source (commercial) - <a target="_blank" href="https://codescene.io">codescene.io</a>
+					</li>
+				</ul>
+			</small>
+		</section>
+		<section>
+			<p>
+				<small>
+					<strong style="color: orange">Temporal coupling analysis</strong> using Code Maat on Irdeto MediaManager
+				</small>
+			</p>
+			<img src="img/francesco/output-temporal-coupling.jpg" style="max-width: 95%">
+		</section>
+		<section>
+			<p>
+				<small>
+					<strong style="color: orange">Hotspots analysis</strong> using Code Maat analysis on Irdeto MediaManager
+				</small>
+			</p>
+			<img src="img/francesco/output-hotspots.jpg" style="max-width: 85%">
+		</section>
+		<section>
+			<p>
+				<small>
+					The author's website: <a href="http://adamtornhill.com/">adamtornhill.com</a>
+				</small>
+			</p>
+			<br>
+			<p>Thanks!</p>
+		</section>
+		<section>
+			High Performance
 			managed languages
 			<p>
 				<small>by</small>
 			</p>
-				<h3>Martin Thomson</h3>
+			<h3>Martin Thomson</h3>
 		</section>
 		<section>
-		Aeron
+			Aeron
 			<p><small>Aeron is designed to provide high-throughput and low-latency message transport from publishers to subscribers</small></p>
 			<small>
 				<ul>
@@ -122,36 +123,36 @@
     					<span class="fragment fade-out">Which is the fastest implementation?</span>
 					</span>
 				</p>
-    			<p>
+				<p>
     				<span class="fragment fade-in">
         				<span class="fragment fade-out">Which was the fastest before any optimizations?</span>
     				</span>
-    			</p>
+				</p>
 				<p class="fragment">Time, Skills &amp; Resources</p>
 				<p class="fragment">Managed runtime is not always the best choise</p>
-					
+
 			</small>
 		</section>
 		<section>
 			Access Pattern Benchmark
-			<section>			
+			<section>
 				<table border="0">
 					<tr><td>
 						<p>pattern of access</td><td><p>average time of individual addition</p>
-							</td></tr>
+					</td></tr>
 					<tr><td>
 						<p class="fragment">sequentially:</td><td><p class="fragment" align="right">~1ns</p>
-							</td></tr><tr><td>
-						<p class="fragment">random walk  per OS page:</td><td><p class="fragment" align="right">~3ns</p>
-							</td></tr><tr><td>
-						<p class="fragment">data dependent walk per OS page:</td><td><p class="fragment" align="right">~7ns</p>
-							</td></tr><tr><td>
-						<p class="fragment">random heap walk</td><td><p class="fragment" align="right">~19ns</p>
-							</td></tr><tr><td>
-						<p class="fragment">data dependant heap walk:</td><td><p class="fragment" align="right">~90ns</p>
-							</td></tr><tr><td>
-						<p class="fragment">numa access:</td><td><p class="fragment" align="right">+40ns</p>
-							</td></tr>
+					</td></tr><tr><td>
+					<p class="fragment">random walk  per OS page:</td><td><p class="fragment" align="right">~3ns</p>
+				</td></tr><tr><td>
+					<p class="fragment">data dependent walk per OS page:</td><td><p class="fragment" align="right">~7ns</p>
+				</td></tr><tr><td>
+					<p class="fragment">random heap walk</td><td><p class="fragment" align="right">~19ns</p>
+				</td></tr><tr><td>
+					<p class="fragment">data dependant heap walk:</td><td><p class="fragment" align="right">~90ns</p>
+				</td></tr><tr><td>
+					<p class="fragment">numa access:</td><td><p class="fragment" align="right">+40ns</p>
+				</td></tr>
 				</table>
 			</section>
 
@@ -160,64 +161,64 @@
 					<li class="fragment">Memory is transported in Cachelines</li>
 					<li class="fragment">Memory is managed in OS Pages</li>
 					<li class="fragment">Memory is pre-fetched on predictable access patterns</li>
-				</ul>		
+				</ul>
 			</section>
 		</section>
-		<section>			
-				<p>Profile guided optimizations</p>
+		<section>
+			<p>Profile guided optimizations</p>
 			<section>
 			</section>
-			<section>			
-				<p><img src="img/konstantina/branches_a.png" style="max-width: 80%"/></p>			
+			<section>
+				<p><img src="img/konstantina/branches_a.png" style="max-width: 80%"/></p>
 			</section>
-			<section>			
+			<section>
 				<p><img src="img/konstantina/branches_b.png" style="max-width: 80%"/></p>
 			</section>
-			<section>			
+			<section>
 				<p><img src="img/konstantina/inlining_a.png" style="max-width: 80%"/></p>
 			</section>
-			<section>			
+			<section>
 				<p><img src="img/konstantina/inlining_b.png" style="max-width: 80%"/></p>
 			</section>
 		</section>
-			
-			
-		<section>			
+
+
+		<section>
 			<p>Garbage collection</p>
 
 			<section>
 				<p class="fragment">Generational hypothesis: "most objects die young"</p>
 				<small>
-				<ul>
-					<li class="fragment">Focus collection efforts on young generation</li>
-					<li class="fragment">Promote objects that live long enough to older generations</li>
-					<li class="fragment">Only collect older generations as they fill up</li>
-					<li class="fragment">Tends to be more efficient</li>
-				</ul>
+					<ul>
+						<li class="fragment">Focus collection efforts on young generation</li>
+						<li class="fragment">Promote objects that live long enough to older generations</li>
+						<li class="fragment">Only collect older generations as they fill up</li>
+						<li class="fragment">Tends to be more efficient</li>
+					</ul>
 				</small>
 			</section>
 			<section>
 				<small>
-				<p>Compaction</p>
+					<p>Compaction</p>
 				</small>
 				<p><img src="img/konstantina/compaction_a.png" style="max-width: 80%"/></p>
 			</section>
 			<section>
 				<small>
-				<p>Compaction</p>
+					<p>Compaction</p>
 				</small>
 				<p><img src="img/konstantina/compaction_b.png" style="max-width: 80%"/></p>
 			</section>
 			<section>
 				<small>
-				<p>Compaction</p> 
-				<ul>
-					<li>Defragments heap</li>
-					<li>Moves objects to memory</li>
-					<li>Remaps all affected references</li>
-					<li>Frees contiguous memory regions
-						<ul><li>Same OS pages, same cache lines</li></ul></li>
-				</ul>
+					<p>Compaction</p>
+					<ul>
+						<li>Defragments heap</li>
+						<li>Moves objects to memory</li>
+						<li>Remaps all affected references</li>
+						<li>Frees contiguous memory regions
+							<ul><li>Same OS pages, same cache lines</li></ul></li>
+					</ul>
 				</small>
 			</section>
 			<section>
@@ -228,36 +229,36 @@
 				<table border="0">
 					<tr><td>
 						<p>G1</td><td><p>Azul Zing C4</p>
-							</td></tr>
+					</td></tr>
 					<tr><td>
 						<p>monolithic stop-the-world copying new gen</td><td><p>concurrent, compacting new gen</p>
-							</td></tr>
+					</td></tr>
 					<tr><td>
 						<p>mostly concurrent old gen marker</td><td><p>concurrent guaranteed-single-pass-marker</p>
-							</td></tr>
+					</td></tr>
 					<tr><td>
 						<p>stop-the-world mostly incremental compacting old gen</td><td><p>concurrent, compacting old gen</p>
-							</td></tr>
+					</td></tr>
 					<tr><td>
 						<p>fallback to full collection</td><td><p>non stop the world fallback</p>
-							</td></tr>
+					</td></tr>
 					<tr><td>
 						<p>Compact non-popular regions in short stop the world pauses</td><td><p>easier tuning</p>
-							</td></tr>
+					</td></tr>
 				</table>
 			</section>
 		</section>
 		<section>
 			Future
 			<section>
-				<p>object inlining, aggregation</p> 
+				<p>object inlining, aggregation</p>
 			</section>
 			<section>
 				<img src="img/konstantina/modern_hardware.png" style="max-width: 100%"/>
 			</section>
 		</section>
 		<section>
-			<p>Not easy to pick a winner</p> 
+			<p>Not easy to pick a winner</p>
 		</section>
 		<section>
 			<ul>
@@ -275,7 +276,7 @@
 		</section>
 	</div>
 </div>
-<script src="js/reveal.js"></script>
+<script src="lib/revealjs/js/reveal.js"></script>
 <script>
     Reveal.initialize();
 </script>
