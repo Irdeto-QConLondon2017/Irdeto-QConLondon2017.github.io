@@ -171,6 +171,24 @@
 		<section>
 			<p>Profile guided optimizations</p>
 			<section>
+				<table border="0">
+					<tr><td><p></p></td><td>
+						<p>managed runtimes</td><td><p align="right">native languages</p>
+					</td></tr>
+					<tr><td>
+						optimisations during <p></td><td>
+						<p>runtime</td><td><p align="right">statically at compile time</p>
+					</td></tr>
+					<tr><td><p>use of real data</p></td><td>
+						<p>yes</td><td><p align="right">no</p>
+					</td></tr>
+					<tr><td><p>who makes the decision</p></td><td>
+						<p>JVM</td><td><p align="right">you</p>
+					</td></tr>
+					<tr><td><p>rerun</p></td><td>
+						<p>in every run better results</td><td><p align="right">need to compile again</p>
+					</td></tr>
+				</table>
 			</section>
 			<section>
 				<p><img src="img/konstantina/branches_a.png" style="max-width: 80%"/></p>
@@ -191,13 +209,11 @@
 			<p>Garbage collection</p>
 
 			<section>
-				<small>
 					<ul>
-						<li class="fragment">mark: identify the live objects in the memory heap (~live set)</li>
-						<li class="fragment">sweep: reclaim resources held by dead objects (~heap)</li>
-						<li class="fragment">compaction: periodically relocate live objects</li>
+						<li class="fragment">identify the live objects in the memory heap <small>(mark: ~live set)</small></li>
+						<li class="fragment">reclaim resources held by dead objects <small>(sweep: ~heap)</small></li>
+						<li class="fragment">periodically relocate live objects <small>(compaction: ~live set)</small></li>
 					</ul>
-				</small>
 				<p class="fragment">Generational hypothesis: "most objects die young"</p>
 			</section>
 			<section>
